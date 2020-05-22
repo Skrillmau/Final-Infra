@@ -39,5 +39,5 @@ spec:
         image: sockshead/react-img:latest
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 80
+        - containerPort: 8080
       restartPolicy: Always    
