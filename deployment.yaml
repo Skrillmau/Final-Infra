@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reactest
+spec:
+  replicas: 2
+  selector:
+      matchLabels:
+        app: reactest
+  template:
+    metadata:
+      labels:
+        app: reactest
+    spec:
+      containers:
+      - name: reactest
+        image: nikcarp/imagen_react:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
