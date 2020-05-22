@@ -14,7 +14,9 @@ spec:
     spec:
       containers:
       - name: reactest
-        image: nikcarp/imagen_react:latest
+        image: sockshead/react-img:latest
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 3000
+        - containerPort: 80
+      restartPolicy: Always
+      
