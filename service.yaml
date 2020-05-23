@@ -4,6 +4,8 @@ metadata:
   name: appweb1
 spec:
   type: NodePort
+  externalIPs:
+    - 192.168.99.100
   ports:
     - port: 80
       protocol: TCP
