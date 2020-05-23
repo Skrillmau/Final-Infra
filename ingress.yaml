@@ -1,18 +1,18 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: test-ingress
-
+  name: example-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: localhost
   - http:
       paths:
-      - path: /app1
-        backend:
-          serviceName: appweb1
-          servicePort: 80
-      - path: /app2
-        backend:
-          serviceName: appweb2
-          servicePort: 80
+        - path: /apple
+          backend:
+            serviceName: appweb1-service
+            servicePort: 80
+        - path: /banana
+          backend:
+            serviceName: appweb2-service
+            servicePort: 80
