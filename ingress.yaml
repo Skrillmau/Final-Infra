@@ -4,10 +4,13 @@ metadata:
   name: test-ingress
 spec:
   rules:
-
   - http:
       paths:
       - path: /app2
         backend:
           serviceName: appweb2
-          servicePort: 8080
+          servicePort: 80
+      - path: /*
+        backend:
+          serviceName: appweb1
+          servicePort: 80

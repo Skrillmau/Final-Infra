@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: appweb1
 spec:
+  type: NodePort
   ports:
     - port: 80
       protocol: TCP
@@ -17,7 +18,7 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 8080
+    - port: 80
       targetPort: 80
       protocol: TCP
   selector: 

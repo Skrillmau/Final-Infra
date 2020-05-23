@@ -15,7 +15,7 @@ spec:
       containers:
       - name: appweb1
         image: sockshead/react-img:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
       restartPolicy: Always
@@ -37,7 +37,7 @@ spec:
       containers:
       - name: appweb2
         image: sockshead/react-img:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
       restartPolicy: Always    
